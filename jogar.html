@@ -11,8 +11,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
 	<link rel="stylesheet" type="text/css" href="css/jogar.css" media="all">
-	<script src="js/corretoErrado.js">
-	</script>
 </head>
 
 <body>
@@ -28,9 +26,9 @@
 	</header>
 
 <div class="players">
-	<div class="p1">Nome 1</div>
+	<div class="p1" id="name1">Nome 1</div>
 	<div class="meio">Score</div>
-	<div class="p2">Nome 2</div>
+	<div class="p2" id="name2">Nome 2</div>
 </div>
 <br>
 	<div class="skills-wheel">
@@ -187,8 +185,11 @@ jQuery(document).ready(function ($) {
                 alert('Este navegador não suporta esta funcionalidade ainda!');
             }
         }, false);
+
 	    ////////////////////////////ATIVIDADE DE RECONHECIMENTO DE FALA//////////////////////////////////////////
     </script>
+
+    <script src="js/corretoErrado.js"></script>
 
 </body>
 </html>
