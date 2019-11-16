@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Roleta teste SONORE</title>
+	<script src="https://static.codepen.io/assets/editor/live/console_runner-1df7d3399bdc1f40995a35209755dcfd8c7547da127f6469fd81e5fba982f6af.js"></script>
+	<script src="https://static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js"></script>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+	<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+	<link rel="canonical" href="https://codepen.io/felipedasilvsa/pen/zrGGJX?editors=1111">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jogar.css" media="all">
+	<script src="js/corretoErrado.js">
+	</script>
+</head>
+
+<body>
+	<header>
+		<div class="container">
+		<nav>
+			<ul>
+				<li> <a href="#" class="qmsomos">Quem somos</a>  </li>
+				<li> <a href="#" class="Sair">Sair</a> </li>
+			</ul>
+		</nav>
+	</div>
+	</header>
+
+<div class="players">
+</div>
+<br> <br>
+	<div class="skills-wheel">
+<ul class="wheel">
+    <li>
+        <a href="#commercial-awareness" class="fancybox">ATIVIDADE 1</a>
+    </li>
+    <li>
+        <a href="#communication" class="fancybox">ATIVIDADE 2</a>
+
+    </li>
+    <li>
+       <a href="#teamwork"class="fancybox">ATIVIDADE 3</a>
+
+    </li>
+    <li>
+        <a href="#negotiation" class="fancybox">ATIVIDADE 4</a>
+
+    </li>
+    <li>
+        <a href="#problem-solving" class="fancybox">ATIVIDADE 5</a>
+
+    </li>
+  
+</ul> <a href="#/" title="TITLE TEXT." class="btn">START!</a>
+
+</div>
+<!-- OVERLAY Commercial Awareness -->
+<div id="commercial-awareness" class="hide">
+
+	<div class="atv1">
+		<img class="imgObj" src="img/apple.png">
+		<p class="resultado" id="resultado">Qual é o nome deste objeto?</p>
+		<input class="speakBtn" id="speakBtn" type=image src="img/mic.png">
+	</div>
+
+	<div class="div-certo">
+		<p class="correto">Correto!</p>
+		<img class="imgObj" src="img/check.png">
+	</div>
+
+</div>
+<!-- OVERLAY Communication -->
+<div id="communication" class="hide">
+    <h2>Atividade 2</h2>
+    <p>descricao da atividade!!</p>
+</div>
+
+<!-- OVERLAY Teamwork -->
+<div id="teamwork" class="hide">
+    <h2>Atividade 3</h2>
+    <p>descricao da atividade!!</p>
+</div>
+
+<!-- OVERLAY Negotiation -->
+<div id="negotiation" class="hide">
+    <h2>Atividade 4</h2>
+    <p>descricao da atividade!!</p>
+</div>
+
+<!-- OVERLAY Problem Solving -->
+<div id="problem-solving" class="hide">
+    <h2>Atividade 5</h2>
+    <p>descricao da atividade!!</p>
+</div>
+<div class="footer">
+  <p>Developed by: Equipe Sonore®</p>
+</div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/velocity/1.0.0/velocity.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<script id="rendered-js">
+          // sequential order
+// advances 3 segments each click
+var _target,_deg = 0;
+function ordSequential() {
+  // order : 1,4,7,2,5,8,3,6 ... then loops
+  return _deg = _deg + 72 * 3 + 1080;
+};
+jQuery(document).ready(function ($) {
+  $(".skills-wheel .btn").on("click", function (e) {
+    // select algorithm sequential, random or preset :
+    ordSequential();
+    _target = (_deg - 360 * parseInt(_deg / 360)) / 72;
+    // start animation
+    // reset opacity of all segments to 1
+    $(".fancybox").parent("li").velocity({
+      opacity: 1 },
+    {
+      duration: 100,
+      complete: function () {
+        $(".wheel").velocity({
+          rotateZ: "-" + _deg + "deg" },
+        {
+          duration: 3000,
+          complete: function (elements) {
+            // after spinning animation is completed, set opacity of target segment's parent
+            $(".fancybox").parent("li").eq(_target).velocity({
+              opacity: 0.4 },
+            {
+              duration: 100,
+              // after opacity is completed, fire targeted segment in fancybox
+              complete: function () {
+                $(".fancybox").eq(_target).trigger("click");
+              } // third animation completed
+            }); // nested velocity 2
+          } // second animation completed
+        }); // nested velocity 1
+      } // first animation completed
+    }); // velocity
+    return false;
+  }); // click
+
+  // initialize fancybox
+  $(".fancybox").fancybox({
+    maxWidth: "85%" });
+
+}); // ready
+          //# sourceURL=pen.js
+   	</script>
+
+
+	    <script>
+	    ////////////////////////////ATIVIDADE DE RECONHECIMENTO DE FALA//////////////////////////////////////////	
+        window.addEventListener('DOMContentLoaded', function() {
+            var speakBtn = document.querySelector('#speakBtn');
+            // testa se o navegador suporta o reconhecimento de voz
+            if (window.SpeechRecognition || window.webkitSpeechRecognition) {
+                // captura a voz
+                var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+                var recognition = new SpeechRecognition();
+                // inicia reconhecimento
+                speakBtn.addEventListener('click', function(e) {
+                    recognition.start();
+                    
+                }, false);
+                // resultado do reconhecimento
+                recognition.addEventListener('result', function(e) {
+                    console.log(e);
+                    var result = e.results[0][0].transcript;
+                    console.log(result);
+                    resultado.innerHTML = "Você disse: "+result;
+                    if (result.toLowerCase() === 'fruta') {
+                        //document.body.classList.toggle('luz-apagada');
+
+                        acertou();
+	                }else{
+	                	errou();
+	                }	
+                    // window.location.href = 'http://' + result;
+                }, false);
+            } else {
+                alert('Este navegador não suporta esta funcionalidade ainda!');
+            }
+        }, false);
+	    ////////////////////////////ATIVIDADE DE RECONHECIMENTO DE FALA//////////////////////////////////////////
+    </script>
+
+</body>
+</html>
