@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Roleta teste SONORE</title>
-	<script src="https://static.codepen.io/assets/editor/live/console_runner-1df7d3399bdc1f40995a35209755dcfd8c7547da127f6469fd81e5fba982f6af.js"></script>
-	<script src="https://static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js"></script>
-	<meta charset="UTF-8">
-	<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
-	<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
-	<link rel="canonical" href="https://codepen.io/felipedasilvsa/pen/zrGGJX?editors=1111">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
-	<link rel="stylesheet" type="text/css" href="css/jogar.css" media="all">
+  <title>Roleta teste SONORE</title>
+  <script src="https://static.codepen.io/assets/editor/live/console_runner-1df7d3399bdc1f40995a35209755dcfd8c7547da127f6469fd81e5fba982f6af.js"></script>
+  <script src="https://static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js"></script>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+  <link rel="canonical" href="https://codepen.io/felipedasilvsa/pen/zrGGJX?editors=1111">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+  <link rel="stylesheet" type="text/css" href="css/jogar.css" media="all">
 </head>
 
 <body>
-	<header>
-		<div class="container">
-		<nav>
-			<ul>
-				<li> <a href="#" class="qmsomos">Quem somos</a>  </li>
-				<li> <a href="#" class="Sair">Sair</a> </li>
-			</ul>
-		</nav>
-	</div>
-	</header>
+  <header>
+    <div class="container">
+    <nav>
+      <ul>
+        <li> <a href="#" class="qmsomos">Quem somos</a>  </li>
+        <li> <a href="#" class="Sair">Sair</a> </li>
+      </ul>
+    </nav>
+  </div>
+  </header>
 
 <div class="players">
-	<div class="p1" id="name1">Nome 1</div>
-	<div class="meio">Score</div>
-	<div class="p2" id="name2">Nome 2</div>
+  <div class="divj1">
+    <div class="p1" id="name1">Nome 1</div>
+    <div class="score" id="score1">0</div>
+  </div>
+  <div class="p2" id="name2">Nome 2</div>
+  <div class="score" id="score2">0</div>
 </div>
 <br>
-	<div class="skills-wheel">
+  <div class="skills-wheel">
 <ul class="wheel">
     <li>
         <a href="#commercial-awareness" class="fancybox">ATIVIDADE 1</a>
@@ -59,16 +62,16 @@
 <!-- OVERLAY Commercial Awareness -->
 <div id="commercial-awareness" class="hide">
 
-	<div class="atv1">
-		<img class="imgObj" src="img/apple.png">
-		<p class="resultado" id="resultado">Qual é o nome deste objeto?</p>
-		<input class="speakBtn" id="speakBtn" type=image src="img/mic.png">
-	</div>
+  <div class="atv1" id="maca">
+    <img class="imgObj" src="img/apple.png">
+    <p class="resultado" id="resultado">Qual é o nome deste objeto?</p>
+    <input class="speakBtn" id="speakBtn" type=image src="img/mic.png">
+  </div>
 
-	<div class="div-certo">
-		<p class="correto">Correto!</p>
-		<img class="imgObj" src="img/check.png">
-	</div>
+  <div class="div-certo" id="check">
+    <p class="correto">Correto!</p>
+    <img class="imgObj" src="img/check.png">
+  </div>
 
 </div>
 <!-- OVERLAY Communication -->
@@ -149,11 +152,11 @@ jQuery(document).ready(function ($) {
 
 }); // ready
           //# sourceURL=pen.js
-   	</script>
+    </script>
 
 
-	    <script>
-	    ////////////////////////////ATIVIDADE DE RECONHECIMENTO DE FALA//////////////////////////////////////////	
+      <script>
+      ////////////////////////////ATIVIDADE DE RECONHECIMENTO DE FALA////////////////////////////////////////// 
         window.addEventListener('DOMContentLoaded', function() {
             var speakBtn = document.querySelector('#speakBtn');
             // testa se o navegador suporta o reconhecimento de voz
@@ -172,13 +175,12 @@ jQuery(document).ready(function ($) {
                     var result = e.results[0][0].transcript;
                     console.log(result);
                     resultado.innerHTML = "Você disse: "+result;
-                    if (result.toLowerCase() === 'fruta') {
+                    if (result.toLowerCase() === 'maçã') {
                         //document.body.classList.toggle('luz-apagada');
-
                         acertou();
-	                }else{
-	                	errou();
-	                }	
+                  }else{
+                    errou();
+                  } 
                     // window.location.href = 'http://' + result;
                 }, false);
             } else {
@@ -186,7 +188,7 @@ jQuery(document).ready(function ($) {
             }
         }, false);
 
-	    ////////////////////////////ATIVIDADE DE RECONHECIMENTO DE FALA//////////////////////////////////////////
+      ////////////////////////////ATIVIDADE DE RECONHECIMENTO DE FALA//////////////////////////////////////////
     </script>
 
     <script src="js/corretoErrado.js"></script>

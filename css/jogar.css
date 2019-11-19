@@ -71,6 +71,12 @@
 
 .score{
 	font-family:"avantgarde_bold", Helvetica, Arial, sans-serif;
+	
+}
+
+.divj1{
+	display: flex;
+
 }
 
 .skills-wheel .btn:active {
@@ -300,7 +306,7 @@ nav li{
 }
 
 .p1{
-	width: 400px;
+	width: 150x;
 
 }
 .p2{

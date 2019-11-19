@@ -3,13 +3,11 @@ document.getElementById("name1").innerHTML = localStorage.getItem("player1");
 document.getElementById("name2").innerHTML = localStorage.getItem("player2");
 
 function acertou(){
-	var m = document.getElementsById("atv1"); 
-	c = m.style;
-	c.color = "#c00";
-	c.backgroundColor = "#eee";
-	c.width = "200px";
-	c.height = "100px";
-	c.borderColor = "#f00";
+	
+	//div da maça
+	document.getElementById('maca').style.display="none";
+	//div do acerto
+	document.getElementById('check').style.display="block";
 
 }
 
