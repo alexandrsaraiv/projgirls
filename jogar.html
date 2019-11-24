@@ -27,10 +27,10 @@
 
 <div class="players">
   <div class="divj1">
-    <div class="p1" id="name1">Nome 1</div>
+    <div class="p1" id="name1">Nome 1</div> &nbsp;
     <div class="score" id="score1">0</div>
   </div>
-  <div class="p2" id="name2">Nome 2</div>
+  <div class="p2" id="name2">Nome 2</div> &nbsp;
   <div class="score" id="score2">0</div>
 </div>
 <br>
@@ -56,7 +56,16 @@
 
     </li>
   
-</ul> <a href="#/" title="TITLE TEXT." class="btn">START!</a>
+</ul> <a href="#/" title="TITLE TEXT." class="btn" id="btstart">START!</a>
+
+<audio src="#"></audio>
+<script>
+  const button = document.querySelector('btstart')
+  btstart.addEventListener('click',function(){
+    const audio = document.querySelector('btstart')
+    audio.play()
+  })
+</script>
 
 </div>
 <!-- OVERLAY Commercial Awareness -->
@@ -70,8 +79,16 @@
 
   <div class="div-certo" id="check">
     <p class="correto">Correto!</p>
-    <img class="imgObj" src="img/check.png">
+    <img class="imgObj" src="img/check.png"> <br>
+    <a id="continuep2" class="continuarp2" onclick="reset()">Continuar vez de Player 2</a>
   </div>
+
+  <div class="div-errado" id="wrong">
+    <p class="errado">Tente de novo!</p>
+    <img class="imgObj" src="img/wrong.png"> <br>
+    <a class="tryagain" onclick="reset()">Tentar novamente</a>
+  </div>
+
 
 </div>
 <!-- OVERLAY Communication -->
@@ -148,7 +165,7 @@ jQuery(document).ready(function ($) {
 
   // initialize fancybox
   $(".fancybox").fancybox({
-    maxWidth: "85%" });
+    maxWidth: "100%" });
 
 }); // ready
           //# sourceURL=pen.js
@@ -159,6 +176,7 @@ jQuery(document).ready(function ($) {
       ////////////////////////////ATIVIDADE DE RECONHECIMENTO DE FALA////////////////////////////////////////// 
         window.addEventListener('DOMContentLoaded', function() {
             var speakBtn = document.querySelector('#speakBtn');
+            var chances=0, acertos=0;
             // testa se o navegador suporta o reconhecimento de voz
             if (window.SpeechRecognition || window.webkitSpeechRecognition) {
                 // captura a voz
@@ -167,18 +185,20 @@ jQuery(document).ready(function ($) {
                 // inicia reconhecimento
                 speakBtn.addEventListener('click', function(e) {
                     recognition.start();
-                    
                 }, false);
                 // resultado do reconhecimento
                 recognition.addEventListener('result', function(e) {
                     console.log(e);
                     var result = e.results[0][0].transcript;
                     console.log(result);
-                    resultado.innerHTML = "Você disse: "+result;
-                    if (result.toLowerCase() === 'maçã') {
-                        //document.body.classList.toggle('luz-apagada');
+                    if (result.toLowerCase() == 'maçã' && acertos == 0) { //igual a 0 acertos a jogada permanece no player 1
+                        acertos++;
+                        play1_score();
                         acertou();
-                  }else{
+                    }else if(result.toLowerCase() == 'maçã' && acertos == 1){ //1 acerto a jogada pertence ao player 2 pois o 1 ja acertou
+                        play2_score();
+                        alert("Fim da atividade 1!");
+                    }else{
                     errou();
                   } 
                     // window.location.href = 'http://' + result;

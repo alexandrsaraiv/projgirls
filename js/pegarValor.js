@@ -1,13 +1,3 @@
-// var capturando ="";
-
-// function capturar () {
-//     capturando = document.getElementById('jg1').value;
-// }
-
-
-// function mudaNome () {
-// 	document.getElementById('fodaa').innerHTML = capturando;
-// }
 
 const btplay = document.getElementById('btPlay');
 
@@ -22,3 +12,4 @@ btplay.addEventListener('click', ()=>{
     localStorage.setItem("player1",nome1);
     localStorage.setItem("player2",nome2);
 })
+
