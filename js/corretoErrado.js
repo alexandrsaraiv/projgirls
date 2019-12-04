@@ -13,7 +13,7 @@ function play2_score(){
 }
 
 function acertou(){
-	
+
 	//div da ma�a
 	document.getElementById('maca').style.display="none";
 	//div do acerto
@@ -21,14 +21,23 @@ function acertou(){
 
 }
 
+
 function errou(){
+
 	document.getElementById('maca').style.display="none";
 	document.getElementById('wrong').style.display="table-cell";
 }
 
 function reset(){
+
 	document.getElementById('wrong').style.display="none";
 	document.getElementById('check').style.display="none";
 	document.getElementById('maca').style.display="table-cell";
+}
+
+function fimAtv1(){
+	document.getElementById('wrong').style.display="none";
+	document.getElementById('check').style.display="none";
+	document.getElementById('divFinal').style.display="table-cell";
 }
 

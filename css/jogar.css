@@ -170,11 +170,8 @@
 	top:1px;
 }
 
-
-
-
 .score{
-	font-family:"avantgarde_bold", Helvetica, Arial, sans-serif;
+	font-family: 'SegoeUIBlack';
 	
 }
 
@@ -384,9 +381,10 @@ nav li{
 
 .p1{
 	width: 150x;
-
+    font-family: 'SegoeUIBlack';
 }
 .p2{
+    font-family: 'SegoeUIBlack';
 	width: 400px;
 	text-align: right;
 

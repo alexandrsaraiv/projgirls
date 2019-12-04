@@ -13,3 +13,4 @@ btplay.addEventListener('click', ()=>{
     localStorage.setItem("player2",nome2);
 })
 
+
