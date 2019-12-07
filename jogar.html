@@ -58,22 +58,13 @@
   
 </ul> <a href="#/" title="TITLE TEXT." class="btn" id="btstart">START!</a>
 
-<audio src="#"></audio>
-<script>
-  const button = document.querySelector('btstart')
-  btstart.addEventListener('click',function(){
-    const audio = document.querySelector('btstart')
-    audio.play()
-  })
-</script>
-
 </div>
 <!-- OVERLAY Commercial Awareness -->
 <div id="commercial-awareness" class="hide">
 
   <div class="atv1" id="maca">
     <img class="imgObj" src="img/apple.png">
-    <p class="resultado" id="resultado">Qual é o nome deste objeto?</p>
+    <p class="fontePadrao" id="resultado">Qual é o nome deste objeto?</p>
     <input class="speakBtn" id="speakBtn" type=image src="img/mic.png">
   </div>
 
@@ -90,7 +81,7 @@
   </div>
 
   <div class="div-certo" id="divFinal">
-    <p class="resultado">Fim da atividade 1!</p> <br>
+    <p class="fontePadrao">Fim da atividade 1!</p> <br>
     <a class="continuarp2" onclick="$.fancybox.close();">Sair</a>
   </div>
 
@@ -99,9 +90,21 @@
 </div>
 <!-- OVERLAY Communication -->
 <div id="communication" class="hide">
-    <h2>Atividade 2</h2>
-    <p>descricao da atividade!!</p>
+
+  <div class="atv1">
+      <p class="fontePadraoMaior">Ouça a Palavra:</p>
+      <audio src="audio/win.mp3"></audio>
+      <input class="speakBtn" type=image src="img/play.png" onclick="audio()">
+      <p class="fontePadrao">Escreva a Palavra aqui:</p>
+      <input id="resp-atv2" type="text" class="css-input"/> <br>
+      <a class="continuarp2" onclick="verificaAtv2()">Enviar</a>
+  </div>
+
+
 </div>
+
+
+
 
 <!-- OVERLAY Teamwork -->
 <div id="teamwork" class="hide">
