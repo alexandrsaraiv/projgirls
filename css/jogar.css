@@ -79,6 +79,18 @@
     font-size: 32px;
 }
 
+.fonteTitulo{
+    font-family: 'SegoeUIBlack';
+    color: #FAB005;
+    font-size: 32px;
+}
+
+.hrzada{
+    background-color: #ffae00;
+    height: 1px;
+}
+
+
 .fontePadraoMaior{
     font-family: 'SegoeUIBlack';
     color: #FAB005;
@@ -95,6 +107,7 @@
         text-align: center;
         vertical-align:middle;
         display:table-cell;
+        margin-top: 0%;
 }
 
 .div-certo{
@@ -106,7 +119,33 @@
      text-align: center;
      vertical-align:middle;
 }
-
+.div-certo2{
+    display: none;
+    border-radius: 50px;
+    background: #DCDCDC;
+    width: 200vh;
+    height: 90vh;
+    text-align: center;
+    vertical-align:middle;
+}
+.div-certo3{
+    display: none;
+    border-radius: 50px;
+    background: #DCDCDC;
+    width: 200vh;
+    height: 90vh;
+    text-align: center;
+    vertical-align:middle;
+}
+.div-certo4{
+    display: none;
+    border-radius: 50px;
+    background: #DCDCDC;
+    width: 200vh;
+    height: 90vh;
+    text-align: center;
+    vertical-align:middle;
+}
 .div-errado{
     display: none;
     border-radius: 50px;
@@ -116,7 +155,33 @@
     text-align: center;
     vertical-align:middle;
 }
-
+.div-errado2{
+    display: none;
+    border-radius: 50px;
+    background: #DCDCDC;
+    width: 200vh;
+    height: 90vh;
+    text-align: center;
+    vertical-align:middle;
+}
+.div-errado3{
+    display: none;
+    border-radius: 50px;
+    background: #DCDCDC;
+    width: 200vh;
+    height: 90vh;
+    text-align: center;
+    vertical-align:middle;
+}
+.div-errado4{
+    display: none;
+    border-radius: 50px;
+    background: #DCDCDC;
+    width: 200vh;
+    height: 90vh;
+    text-align: center;
+    vertical-align:middle;
+}
 .correto{
     font-family: 'SegoeUIBlack';
     margin-top: 30px;
@@ -420,7 +485,7 @@ nav li{
      background-color: #ebebeb;
      color: #ffae00;
      border-style: solid;
-     border-radius: 50px;
+     border-radius: 10px;
      box-shadow: 0px 0px 0px rgba(66,66,66,.0);
      text-shadow: 0px 0px 0px rgba(66,66,66,.0);
 

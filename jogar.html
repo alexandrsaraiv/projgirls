@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Roleta teste SONORE</title>
+  <title>Sonore®</title>
+  <link rel="shortcut icon" href="img/logo.png"/>
   <script src="https://static.codepen.io/assets/editor/live/console_runner-1df7d3399bdc1f40995a35209755dcfd8c7547da127f6469fd81e5fba982f6af.js"></script>
   <script src="https://static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js"></script>
   <meta charset="UTF-8">
-  <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
   <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
   <link rel="canonical" href="https://codepen.io/felipedasilvsa/pen/zrGGJX?editors=1111">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
@@ -59,10 +59,12 @@
 </ul> <a href="#/" title="TITLE TEXT." class="btn" id="btstart">START!</a>
 
 </div>
-<!-- OVERLAY Commercial Awareness -->
+<!-- ATIVIDADE 1 -->
 <div id="commercial-awareness" class="hide">
 
   <div class="atv1" id="maca">
+    <p class="fonteTitulo">Atividade 1</p> 
+    <hr class="hrzada">
     <img class="imgObj" src="img/apple.png">
     <p class="fontePadrao" id="resultado">Qual é o nome deste objeto?</p>
     <input class="speakBtn" id="speakBtn" type=image src="img/mic.png">
@@ -88,34 +90,97 @@
   
 
 </div>
-<!-- OVERLAY Communication -->
+<!-- ATIVIDADE 2 -->
 <div id="communication" class="hide">
 
-  <div class="atv1">
-      <p class="fontePadraoMaior">Ouça a Palavra:</p>
-      <audio src="audio/win.mp3"></audio>
-      <input class="speakBtn" type=image src="img/play.png" onclick="audio()">
-      <p class="fontePadrao">Escreva a Palavra aqui:</p>
+  <div class="atv1" id="digitar-palavra">
+      <p class="fontePadraoMaior">Ouça a palavra:</p>
+      <audio src="audio/atv2.mp3"></audio>
+      <input class="speakBtn" type=image src="img/mic.png" onclick="audio()">
+      <p class="fontePadrao">Escreva a palavra aqui:</p>
       <input id="resp-atv2" type="text" class="css-input"/> <br>
       <a class="continuarp2" onclick="verificaAtv2()">Enviar</a>
   </div>
 
+  <div class="div-certo2" id="check2">
+      <p class="correto">Correto!</p>
+      <img class="imgObj" src="img/check.png"> <br>
+      <a id="continueAtv" class="continuarp2" onclick="reset2()">Próximo jogador</a>
+    </div>
+
+    <div class="div-errado2" id="wrong2">
+        <p class="errado">Resposta incorreta!</p>
+        <img class="imgObj" src="img/wrong.png"> <br>
+        <a class="tryagain" onclick="reset2()">Próximo jogador</a>
+      </div>
+
+      <div class="div-errado2" id="fimAtv2">
+          <p class="fontePadrao">Fim da atividade 2!</p> <br>
+          <a class="continuarp2" onclick="$.fancybox.close();">Sair</a>
+        </div>
 
 </div>
 
-
-
-
-<!-- OVERLAY Teamwork -->
+<!-- ATIVIDADE 3 -->
 <div id="teamwork" class="hide">
-    <h2>Atividade 3</h2>
-    <p>descricao da atividade!!</p>
+
+  <div class="atv1" id="atv3-jogar">
+    <p class="fonteTitulo">ARTICULAÇÃO DA BOCA</p> 
+    <hr class="hrzada">
+    <img class="imgObj" src="img/atv3.png">
+    <p class="fontePadrao">CH - A - V - E</p>
+    <p class="fontePadrao" id="resultado">Como se diz isso?</p>
+    <input class="speakBtn" id="speakBtn" type=image src="img/mic.png" onclick="atv3()">
+  </div>
+
+  <div class="div-certo3" id="check3">
+      <p class="correto">Correto!</p>
+      <img class="imgObj" src="img/check.png"> <br>
+      <a id="continueAtv" class="continuarp2" onclick="reset3()">Próximo jogador</a>
+    </div>
+
+    <div class="div-errado3" id="wrong3">
+        <p class="errado">Resposta incorreta!</p>
+        <img class="imgObj" src="img/wrong.png"> <br>
+        <a class="tryagain" onclick="reset3()">Próximo jogador</a>
+      </div>
+
+      <div class="div-errado3" id="fimAtv3">
+          <p class="fontePadrao">Fim da atividade 3!</p> <br>
+          <a class="continuarp2" onclick="$.fancybox.close();">Sair</a>
+        </div>
+
 </div>
 
-<!-- OVERLAY Negotiation -->
+<!-- ATIVIDADE 4 -->
 <div id="negotiation" class="hide">
-    <h2>Atividade 4</h2>
-    <p>descricao da atividade!!</p>
+
+    <div class="atv1" id="atv4-jogar">
+        <p class="fonteTitulo">ATIVIDADE 4</p> 
+        <hr class="hrzada">
+        <p class="fontePadrao">Soletre a palavra:</p>
+        <p class="fontePadraoMaior" id="resultado">ZERO</p>
+        <input class="speakBtn" id="speakBtn" type=image src="img/mic.png" onclick="atv4()">
+      </div>
+    
+      <div class="div-certo4" id="check4">
+          <p class="correto">Correto!</p>
+          <img class="imgObj" src="img/check.png"> <br>
+          <a id="continueAtv" class="continuarp2" onclick="reset4()">Próximo jogador</a>
+        </div>
+    
+        <div class="div-errado4" id="wrong4">
+            <p class="errado">Resposta incorreta!</p>
+            <img class="imgObj" src="img/wrong.png"> <br>
+            <a class="tryagain" onclick="reset4()">Próximo jogador</a>
+          </div>
+    
+          <div class="div-errado4" id="fimAtv4">
+              <p class="fontePadrao">Fim da atividade 4!</p> <br>
+              <a class="continuarp2" onclick="$.fancybox.close();">Sair</a>
+            </div>
+
+
 </div>
 
 <!-- OVERLAY Problem Solving -->
@@ -182,7 +247,7 @@ jQuery(document).ready(function ($) {
 
 
       <script>
-      ////////////////////////////ATIVIDADE DE RECONHECIMENTO DE FALA////////////////////////////////////////// 
+      ////////////////////////////ATIVIDADE DE RECONHECIMENTO DE FALA 1////////////////////////////////////////// 
         window.addEventListener('DOMContentLoaded', function() {
             var speakBtn = document.querySelector('#speakBtn');
             var vez=0, acertos=0;
@@ -214,16 +279,15 @@ jQuery(document).ready(function ($) {
 
                     }
                     if(vez==1){
-
                       if (result.toLowerCase() == 'maçã') { 
                           play2_score();
                           acertou();
-                          alert('fim de game!');
+                          alert('Resposta Correta, Finalizando atividade!');
                           fimAtv1();
                     }else{
                        errou();
                         if(vez>0){
-                            alert('fim de game!');
+                            alert('Resposta errada, Finalizando atividade!')
                             fimAtv1();
                         }
                     } 
