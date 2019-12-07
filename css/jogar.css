@@ -245,7 +245,7 @@
 
 .score{
 	font-family: 'SegoeUIBlack';
-	
+    color: #ffae00;
 }
 
 .divj1{
@@ -453,10 +453,12 @@ nav li{
 }
 
 .p1{
-	width: 150x;
+    width: 150x;
+    color: #ffae00;
     font-family: 'SegoeUIBlack';
 }
 .p2{
+    color: #ffae00;
     font-family: 'SegoeUIBlack';
 	width: 400px;
 	text-align: right;

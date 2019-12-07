@@ -1,0 +1,180 @@
+.container1{
+	width: 80%;
+	margin: auto;
+}
+
+body{
+	margin: 0;
+    font-weight: 300;
+    background-image: url(../img/tinta.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 45%;
+    font-family: "Roboto", sans-serif;
+     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;     
+}
+
+header{
+	background: #ffe091;
+}
+header::after{
+	content: '';
+	display: table;
+	clear: both;
+}
+nav{
+	float: right;
+}
+nav ul{
+	width: auto;
+	float: right;
+	margin-top: 2px;
+
+}
+nav li{
+	display: inline-block;
+	padding: 5px 10px;
+	margin-top: 7px;
+}
+.Sair {
+	background-color:#ff6450;
+	border-radius:42px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:17px;
+	padding:18px 50px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.Sair:hover {
+	background-color:#ff7060;
+}
+.Sair:active {
+	position:relative;
+	top:1px;
+}
+.qmsomos {
+	background-color:#ffae00;
+	border-radius:42px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:17px;
+	padding:18px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e69900;
+}
+.qmsomos:hover {
+	background-color:#ffb720;
+}
+.qmsomos:active {
+	position:relative;
+	top:1px;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color:#ffe091 ;
+  font-family:Trebuchet MS;
+  text-align: center;
+} 
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 360px;
+  padding: 1% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  text-align: center;
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #228BE6;
+  width: 100%;
+  border: 0;
+  border-radius: 20px;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #115593;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #228BE6;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.img{
+    max-width: 270px;
+    max-height: 250px;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
