@@ -15,6 +15,12 @@ body{
      -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;     
 }
+@font-face {
+  font-family: 'Bahnschrift';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Bahnschrift'), url('fonts/BAHNSCHRIFT1.woff') format('woff');
+  }
 
 header{
 	background: #ffe091;
@@ -44,7 +50,7 @@ nav li{
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Trebuchet MS;
+	font-family: 'Bahnschrift';
 	font-size:17px;
 	padding:18px 50px;
 	text-decoration:none;
@@ -63,7 +69,7 @@ nav li{
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Trebuchet MS;
+	font-family: 'Bahnschrift';
 	font-size:17px;
 	padding:18px 31px;
 	text-decoration:none;
@@ -83,7 +89,7 @@ nav li{
   width: 100%;
   height: 60px;
   background-color:#ffe091 ;
-  font-family:Trebuchet MS;
+  font-family: 'Bahnschrift';
   text-align: center;
 } 
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
@@ -101,7 +107,7 @@ nav li{
   text-align: center;
 }
 .form input {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Bahnschrift';
   outline: 0;
   background: #f2f2f2;
   width: 100%;
@@ -112,7 +118,7 @@ nav li{
   font-size: 14px;
 }
 .form button {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Bahnschrift';
   text-transform: uppercase;
   outline: 0;
   background: #228BE6;

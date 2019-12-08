@@ -1,52 +1,51 @@
+
 <!DOCTYPE html>
 <html>
-
 <head>
 	<link rel="shortcut icon" href="img/logo.png"/>
-	<title>Sonore</title>
-	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<title>Login - Sonore</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
-
-<body>
-
+<body translate="no">
 	<header>
 		<div class="container1">
-			<nav>
-				<ul>
-					<li> <a href="about.html" class="qmsomos">Quem somos</a> </li>
-					<li> <a href="#" class="Sair">Sair</a> </li>
-				</ul>
-			</nav>
-		</div>
+		<nav>
+			<ul>
+				<li> <a href="about.html" class="qmsomos">Quem somos</a>  </li>
+				<li> <a href="#" class="Sair">Sair</a> </li>
+			</ul>
+		</nav>
+	</div>
 	</header>
 
-	<div class="container">
+    <div class="login-page">
 
-		<div class="box1">
-			<center><img src="img/macaco.png" class="img"></center>
-			<br> <br> <br>
-			<center><input id="jg1" type="text" class="css-input" placeholder="Jogador 1" /></center>
-		</div>
-		<div class="box2">
-			<center><img src="img/vs2.JPG" class="img"></center>
-			<br> <br> <br>
-			<center><a type="submit" href="jogar.html" class="Jogar" id="btPlay">JOGAR!</a></center>
-		</div>
-		<div class="box3">
-			<center><img src="img/pessego.png" class="img"></center>
-			<br> <br> <br>
-			<center><input id="jg2" type="text" class="css-input" placeholder="Jogador 2" /></center>
-		</div>
-	</div>
-
-
-
-	<div class="footer">
-		<p>Developed by: Equipe Sonore®</p>
-	</div>
-
-	<script src="./js/pegarValor.js"></script>
-
+        <div class="form">
+         <img class="img" src="img/logo.png"></img>
+          <form class="register-form" action="login.php" method="POST">
+            <input type="text" placeholder="Nome"/>
+            <input type="password" placeholder="Senha"/>
+            <input type="text" placeholder="E-mail"/>
+            <button>Registrar</button>
+            <p class="message">Já registrado? <a href="#">Entrar</a></p>
+          </form>
+          <form class="login-form">
+            <input type="text" placeholder="E-mail"/>
+            <input type="password" placeholder="Senha"/>
+            <button>Entrar</button>
+            <p class="message">Não possui cadastro? <a href="#">Criar uma conta</a></p>
+          </form>
+        </div>
+      </div>
+    
+<div class="footer">
+  <p>Developed by: Equipe Sonore®</p>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script id="rendered-js">
+    $('.message a').click(function () {
+    $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
+    });
+  </script>
 </body>
-
 </html>
