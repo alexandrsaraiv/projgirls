@@ -187,17 +187,14 @@ function atv4(){
 	if (window.SpeechRecognition || window.webkitSpeechRecognition) {
 					vez_atv4++;
 					console.log(vez_atv4);
-					// captura a voz
 					var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
 					var recognition = new SpeechRecognition();
-					// inicia reconhecimento
 					recognition.start();
-					// resultado do reconhecimento
 					recognition.addEventListener('result', function(e) {
 						console.log(e);
 						var result = e.results[0][0].transcript;
 						console.log(result);
-						if(result.toLowerCase() == 'chave'){
+						if(result.toLowerCase() == 'zero1' || result.toLowerCase() == 'z'){
 							if(vez_atv4==1){
 								play1_score();
 								acertouAtv4();
@@ -216,33 +213,31 @@ function atv4(){
 								fimAtv4();
 							}
 						}
-	
-	
 					}, false);
 				} else {
 					alert('Este navegador não suporta esta funcionalidade ainda!');
 				}
 	}
-	function acertouAtv3(){
-		document.getElementById('atv3-jogar').style.display="none";
-		document.getElementById('check3').style.display="table-cell";
+	function acertouAtv4(){
+		document.getElementById('atv4-jogar').style.display="none";
+		document.getElementById('check4').style.display="table-cell";
 	}
 	
-	function errouAtv3(){
-		document.getElementById('atv3-jogar').style.display="none";
-		document.getElementById('wrong3').style.display="table-cell";
+	function errouAtv4(){
+		document.getElementById('atv4-jogar').style.display="none";
+		document.getElementById('wrong4').style.display="table-cell";
 	}
 	
-	function reset3(){
-		document.getElementById('wrong3').style.display="none";
-		document.getElementById('check3').style.display="none";
-		document.getElementById('atv3-jogar').style.display="table-cell";
+	function reset4(){
+		document.getElementById('wrong4').style.display="none";
+		document.getElementById('check4').style.display="none";
+		document.getElementById('atv4-jogar').style.display="table-cell";
 	}
 	
-	function fimAtv3(){
-		document.getElementById('wrong3').style.display="none";
-		document.getElementById('check3').style.display="none";
-		document.getElementById('fimAtv3').style.display="table-cell";
+	function fimAtv4(){
+		document.getElementById('wrong4').style.display="none";
+		document.getElementById('check4').style.display="none";
+		document.getElementById('fimAtv4').style.display="table-cell";
 	}
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
