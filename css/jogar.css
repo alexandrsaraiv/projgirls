@@ -74,6 +74,13 @@
     margin-top: 15px;
 }
 
+.btatv5{
+    float: inherit;
+    max-width: 100px;
+    max-height: 100px;
+    margin-top: 0px;
+}
+
 .imgObj{
     max-width: 190px;
     max-height: 150px;
@@ -153,6 +160,15 @@
     text-align: center;
     vertical-align:middle;
 }
+.div-certo5{
+    display: none;
+    border-radius: 50px;
+    background: #DCDCDC;
+    width: 200vh;
+    height: 90vh;
+    text-align: center;
+    vertical-align:middle;
+}
 .div-errado{
     display: none;
     border-radius: 50px;
@@ -181,6 +197,15 @@
     vertical-align:middle;
 }
 .div-errado4{
+    display: none;
+    border-radius: 50px;
+    background: #DCDCDC;
+    width: 200vh;
+    height: 90vh;
+    text-align: center;
+    vertical-align:middle;
+}
+.div-errado5{
     display: none;
     border-radius: 50px;
     background: #DCDCDC;
@@ -400,6 +425,12 @@ nav li{
 	padding: 5px 10px;
 	margin-top: 7px;
 
+}
+
+.linha-vertical{
+        height: 500px;/*Altura da linha*/
+        border-left: 2px solid;/* Adiciona borda esquerda na div como ser fosse uma linha.*/
+      
 }
 
 .Sair {

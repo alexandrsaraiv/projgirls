@@ -37,22 +37,22 @@
   <div class="skills-wheel">
 <ul class="wheel">
     <li>
-        <a href="#commercial-awareness" class="fancybox"></a>
+        <a href="#commercial-awareness" class="fancybox">ATV</a>
     </li>
     <li>
-        <a href="#communication" class="fancybox"></a>
+        <a href="#communication" class="fancybox">ATV</a>
 
     </li>
     <li>
-       <a href="#teamwork"class="fancybox"></a>
+       <a href="#teamwork"class="fancybox">ATV</a>
 
     </li>
     <li>
-        <a href="#negotiation" class="fancybox"></a>
+        <a href="#negotiation" class="fancybox">ATV</a>
 
     </li>
     <li>
-        <a href="#problem-solving" class="fancybox"></a>
+        <a href="#problem-solving" class="fancybox">ATV</a>
 
     </li>
   
@@ -68,6 +68,7 @@
     <img class="imgObj" src="img/apple.png">
     <p class="fontePadrao" id="resultado">Qual é o nome deste objeto?</p>
     <input class="speakBtn" id="speakBtn" type=image src="img/mic.png">
+    
   </div>
 
   <div class="div-certo" id="check">
@@ -84,10 +85,9 @@
 
   <div class="div-certo" id="divFinal">
     <p class="fontePadrao">Fim da atividade 1!</p> <br>
-    <a class="continuarp2" onclick="$.fancybox.close();">Sair</a>
+    <center><a type="submit" href="finished.html" class="Jogar" id="btFim" onclick="finaliza()">Ver resultados!</a></center>
   </div>
 
-  
 
 </div>
 <!-- ATIVIDADE 2 -->
@@ -95,7 +95,7 @@
 
   <div class="atv1" id="digitar-palavra">
       <p class="fontePadraoMaior">Ouça a palavra:</p>
-      <audio src="audio/atv2.mp3"></audio>
+      <audio id="audio2" src="audio/atv2.mp3"></audio>
       <input class="speakBtn" type=image src="img/mic.png" onclick="audio()">
       <p class="fontePadrao">Escreva a palavra aqui:</p>
       <input id="resp-atv2" type="text" class="css-input"/> <br>
@@ -182,11 +182,40 @@
 
 </div>
 
-<!-- OVERLAY Problem Solving -->
+<!-- ATIVIDADE 5   -->
 <div id="problem-solving" class="hide">
-    <h2>Atividade 5</h2>
-    <p>descricao da atividade!!</p>
+    <div class="atv1" id="atv5-jogar">
+        <p class="fonteTitulo">ATIVIDADE 5</p> 
+        <hr class="hrzada">
+        <p class="fontePadraoMaior">Ouça o trecho da música:</p>
+        <audio id="audio5" src="audio/atv5.mp3"></audio>
+        <input class="btatv5" id="speakBtn" type=image src="img/play.png" onclick="audio2()">
+        <p class="fontePadraoMaior">Cante o trecho que você ouviu:</p>
+        <input class="speakBtn" id="speakBtn" type=image src="img/mic.png" onclick="atv5()">
+      </div>
+    
+      <div class="div-certo5" id="check5">
+          <p class="correto">Muito bem!</p>
+          <img class="imgObj" src="img/check.png"> <br>
+          <a id="continueAtv" class="continuarp2" onclick="reset5()">Próximo jogador</a>
+        </div>
+    
+        <div class="div-errado5" id="wrong5">
+            <p class="errado">Foi quase!</p>
+            <img class="imgObj" src="img/wrong.png"> <br>
+            <a class="tryagain" onclick="reset5()">Próximo jogador</a>
+          </div>
+    
+          <div class="div-errado5" id="fimAtv5">
+              <p class="fontePadrao">Fim da atividade 5!</p> <br>
+              <a class="continuarp2" onclick="$.fancybox.close();">Sair</a>
+            </div>
 </div>
+
+
+
+
+
 <div class="footer">
   <p>Developed by: Equipe Sonore®</p>
 </div>
@@ -306,6 +335,6 @@ jQuery(document).ready(function ($) {
     </script>
 
     <script src="js/funcoes.js"></script>
-    <script src="js/pegarValor.js"></script>
+    <script src="./js/pegarValor.js"></script>
 </body>
 </html>
