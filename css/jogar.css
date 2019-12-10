@@ -17,14 +17,14 @@
 .skills-wheel {
     border: 0px solid #000;
     box-sizing: border-box;
-    height: 410px;
+    height: 444px;
     margin: 0 auto 2em;
     overflow: hidden;
     position: relative;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
-    width: 412px;
+    width: 446px;
 }
 .skills-wheel:before {
 
