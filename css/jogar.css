@@ -17,14 +17,14 @@
 .skills-wheel {
     border: 0px solid #000;
     box-sizing: border-box;
-    height: 430px;
+    height: 410px;
     margin: 0 auto 2em;
     overflow: hidden;
     position: relative;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
-    width: 432px;
+    width: 412px;
 }
 .skills-wheel:before {
 
@@ -265,10 +265,7 @@
 	top:1px;
 }
 
-.score{
-	font-family: 'SegoeUIBlack';
-    color: #ffae00;
-}
+
 
 .divj1{
 	display: flex;
@@ -472,26 +469,77 @@ nav li{
   text-align: center;
 } 
 .players{
-	     display: flex;
-         justify-content: center;
-         align-items: center;
-         font-family: 'Bahnschrift';
-         color: black;
-      	 font-size: 28px;
+        width: 100%;
+        height: 50%;
+        transform: translateY(-50%);
+        color: black;
+        font-size: 32px;
+        position: absolute;   
 }
-
 .p1{
-    width: 150px;
+    position: absolute;
+    left: 15%;
+    top: 100%;
+    transform: translateY(-130%);
     color: #ffae00;
     font-family: 'SegoeUIBlack';
 }
+.score{
+    font-size: 80px;
+    left:25%;
+    top:100%;;
+    transform: translateX(-35%);
+    text-align: center;
+    position: absolute;
+	font-family: 'SegoeUIBlack';
+    color: #ffae00;
+}
+
+
+.score2{
+    font-size: 80px;
+    right: 25%;
+    transform: translateX(35%);
+    top: 100%;
+    text-align: center;
+    position: absolute;
+	font-family: 'SegoeUIBlack';
+    color: #ffae00;
+}
+
 .p2{
+    right: 15%;
+    top: 100%;
+    transform: translateY(-130%);
+    position: absolute;
     color: #ffae00;
     font-family: 'SegoeUIBlack';
-	width: 400px;
-	text-align: right;
 
 }
+.divMacaco{
+    left: 10%;
+    top: 100%;
+    position: absolute;
+}
+
+.divPessego{
+    right: 10%;
+    top: 100%;
+    position: absolute;
+}
+
+
+.imgp1{
+    max-width: 140px;
+    max-height: 140px;
+}
+
+.imgp2{
+    max-width: 140px;
+    max-height: 140px;
+}
+
+
 .meio{
 	width: 100px;
 	text-align: center;
