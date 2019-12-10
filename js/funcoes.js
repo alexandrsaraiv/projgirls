@@ -2,25 +2,22 @@
 document.getElementById("name1").innerHTML = localStorage.getItem("player1");
 document.getElementById("name2").innerHTML = localStorage.getItem("player2");
 
-var vez=0,vez_atv3=0,vez_atv4=0,vez_atv5=0;
+var vez=0,vez_atv3=0,vez_atv4=0,vez_atv5=0,score1,score2;
 var final1, final1;
 //AUMENTA PONTUAÇÃO DO JOGADOR 1
 function play1_score(){
-	var score1 = parseInt(document.getElementById('score1').innerText)+100;
+	score1 = parseInt(document.getElementById('score1').innerText)+100;
 	parseInt(document.getElementById('score1').innerHTML = score1);
 }
 
 //AUMENTA PONTUAÇÃO DO JOGADOR 2
 function play2_score(){
-	var score2 = parseInt(document.getElementById('score2').innerText)+100;
+	score2 = parseInt(document.getElementById('score2').innerText)+100;
 	parseInt(document.getElementById('score2').innerHTML = score2);
 }
 
 function finaliza(){
-	final1 = document.getElementById("score1").value;
-	final2 = document.getElementById("score2").value;
-	localStorage.setItem("score1fim",final1);
-    localStorage.setItem("score2fim",final2);
+	alert(parseInt(document.getElementById('score1').innerHTML));
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////

@@ -5,110 +5,45 @@
     font-weight: normal;
     font-style: normal;
   }
-  
+    
   @font-face {
     font-family: 'Bahnschrift';
     font-style: normal;
     font-weight: normal;
     src: local('Bahnschrift'), url('fonts/BAHNSCHRIFT1.woff') format('woff');
     }
-
   .img{
       max-width:180px;
       max-height:180px;
-      padding: 10px;
   }
-
-
-  .img1{
-    margin-left: 50%;
-    transform: translateX(-50%);
-    max-width:120px;
-    margin-top: 35%;
-    max-height:120px;
-    padding: 10px;
-}
-
-.pley1{
-    width: 300px;
-    height: 200px;
-    position: absolute;
-    transform: translateY(-50%);
-    line-height: 200px;
-    left: 15%;
-    top: 50%;
-}
-
-.btnFim{
-    width: 100%;
-    height: 200px;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 5%;
-    position: absolute;
-}
-
-.pley2{
-    width: 300px;
-    height: 200px;
-    position: absolute;
-    line-height: 200px;
-    right: 15%;
-    top: 0;
-}
-.estrelinha{
-    line-height: 200px;
-    text-align: center;
-    font-size: 90px;
-    font-family: "SegoeUIBlack";
-    position: absolute;
-    color: #ffb720;
-    width: 100%;
-    height: 200px;
-}
-       .meiuca{
+     .container {
            width: 100%;
-           height: 200px;
-           line-height: 400px;
-           text-align: center;
-           left: 50%;
-           top: 50%;
-           position: absolute;
-           transform: translateX(-50%) translateY(-50%);
-        }
-
-        .filho1{
-            font-size: 140px;
-            font-family: "SegoeUIBlack";
-            width: 300px;
-            height: 200px;
-            position: absolute;
-            transform: translateY(-50%);
-            line-height: 200px;
-            left: 15%;
-            top: 50%;
-            color: #ffae00;
-        }
-
-        .filho2{
-            font-size: 140px;
-            font-family: "SegoeUIBlack";
-            width: 300px;
-            height: 200px;
-            position: absolute;
-            line-height: 200px;
-            right: 15%;
-            color: #ffae00;
-            top: 0;
-        }
-
+           height: 80vh;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+       .box {
+           width: 330px;
+           height: -20px;
+       }
+            .box2 {
+           width: 330px;
+           height: -20px;
+           position: center;
+  
+       }
+            .box3 {
+           width: 330px;
+           height: -20px;
+       }
       body{
       margin: 0;
       font-weight: 300;
   }
- 
-
+  
+  
+  
   .container1{
       width: 80%;
       margin: 0 auto;
@@ -196,6 +131,13 @@
       top:1px;
   }
   
+  img:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
   .footer {
     position: fixed;
     left: 0;

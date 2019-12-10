@@ -67,13 +67,13 @@
     width: 100%;
     height: 200px;
 }
-       .meiuca{
+       .container{
            width: 100%;
            height: 200px;
            line-height: 400px;
            text-align: center;
            left: 50%;
-           top: 50%;
+           top: 26%;
            position: absolute;
            transform: translateX(-50%) translateY(-50%);
         }
