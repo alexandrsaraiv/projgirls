@@ -17,27 +17,17 @@
 .skills-wheel {
     border: 0px solid #000;
     box-sizing: border-box;
-    height: 500px;
+    height: 430px;
     margin: 0 auto 2em;
     overflow: hidden;
     position: relative;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
-    width: 502px;
+    width: 432px;
 }
 .skills-wheel:before {
-    border-style: solid;
-    border-width: 32px 32px 0 32px;
-    border-color: #ffffff transparent transparent transparent;
-    content:"";
-    height: 0;
-    left: 50%;
-    margin-left: -32px;
-    position: absolute;
-    top: 8px;
-    z-index: 100;
-    width: 0;
+
 }
 
 .btzinho{
@@ -69,8 +59,8 @@
 /*/////////////////////////////ATIVIDADE 1 DIVS////////////////////////////////////////////////////////////////////*/
 
 .speakBtn{
-    max-width: 190px;
-    max-height: 150px;
+    max-width: 140px;
+    max-height: 120px;
     margin-top: 15px;
 }
 
@@ -109,7 +99,7 @@
     font-family: 'SegoeUIBlack';
     color: #FAB005;
     margin-top: 30px;
-    font-size: 42px;
+    font-size: 30px;
 }
 
 .atv1{
@@ -487,11 +477,11 @@ nav li{
          align-items: center;
          font-family: 'Bahnschrift';
          color: black;
-      	 font-size: 35px;
+      	 font-size: 28px;
 }
 
 .p1{
-    width: 150x;
+    width: 150px;
     color: #ffae00;
     font-family: 'SegoeUIBlack';
 }

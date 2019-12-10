@@ -32,8 +32,8 @@
       max-height:120px;
   }
   .imgPerfil{
-    max-width:230px;
-    max-height:230px;
+    max-width:160px;
+    max-height:160px;
 }
 .container2{
     text-align: center;
@@ -82,11 +82,11 @@ hr{
 
 body{
     margin: 0;
-    max-width: 100%;
 }
   .container1{
-      width: 100%;
-      margin: 0 auto;
+    left: 0;
+    top: 0;
+    width: 100%;
   }
   header{
       background: #ffe091;
@@ -100,7 +100,6 @@ body{
       float: right;
   }
   nav ul{
-      width: auto;
       float: right;
       margin-top: 2px;
   

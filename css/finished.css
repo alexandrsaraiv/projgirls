@@ -23,10 +23,10 @@
   .img1{
     margin-left: 50%;
     transform: translateX(-50%);
-    max-width:120px;
-    margin-top: 35%;
-    max-height:120px;
-    padding: 10px;
+    max-width:90px;
+    margin-top: 32%;
+    max-height:90px;
+    padding: 15px;
 }
 
 .pley1{
@@ -35,7 +35,7 @@
     position: absolute;
     transform: translateY(-50%);
     line-height: 200px;
-    left: 15%;
+    left: 14%;
     top: 50%;
 }
 
@@ -45,7 +45,7 @@
     text-align: center;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 5%;
+    bottom: 0%;
     position: absolute;
 }
 
@@ -54,13 +54,13 @@
     height: 200px;
     position: absolute;
     line-height: 200px;
-    right: 15%;
+    right: 16%;
     top: 0;
 }
 .estrelinha{
-    line-height: 200px;
+    line-height: 150px;
     text-align: center;
-    font-size: 90px;
+    font-size: 70px;
     font-family: "SegoeUIBlack";
     position: absolute;
     color: #ffb720;
@@ -79,7 +79,7 @@
         }
 
         .filho1{
-            font-size: 140px;
+            font-size: 100px;
             font-family: "SegoeUIBlack";
             width: 300px;
             height: 200px;
@@ -92,7 +92,7 @@
         }
 
         .filho2{
-            font-size: 140px;
+            font-size: 100px;
             font-family: "SegoeUIBlack";
             width: 300px;
             height: 200px;
@@ -163,8 +163,8 @@
       cursor:pointer;
       color:#ffffff;
       font-family: 'SegoeUIBlack';
-      font-size:19px;
-      padding:22px 40px;
+      font-size:15px;
+      padding:18px 32px;
       text-decoration:none;
       text-shadow:0px 1px 0px #555554;
   }
